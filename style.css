@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body{
+background:#001a33;
+}
+.pricing_table_monthly, .pricing_table_yearly{
+  width: 700px;
+  color: #6666ff;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  margin: 100px auto 0 auto;
+}
+.pricing_table_monthly >li, .pricing_table_yearly >li{
+  background: #fcfcfc;
+  float: left;
+  list-style-type: none;
+  transition: all 0.2s ease 0s;
+  width: 33.33%
+}
+.pricing_table_monthly >li.BASIC, .pricing_table_yearly >li.BASIC{
+  background: #ec7022;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+  transform: scale(1.04);
+}
+.pricing_table_monthly h3, .pricing_table_yearly h3{
+  text-transform: uppercase;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pricing_table_monthly .price_body, .pricing_table_yearly .price_body{
+  width: 125px;
+  height: 125px;
+  margin: 0 auto 15px auto;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  display: table;
+}
+.pricing_table_monthly .price, .pricing_table_yearly .price{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: table-cell;
+}
+.pricing_table_monthly .price .price_figure, .pricing_table_yearly .price .price_figure{
+  display: block;
+}
+.pricing_table_monthly .price .price_term, .pricing_table_yearly .price .price_term{
+  font-size: 11px;
+  font-weight: normal;
+}
+.pricing_table_monthly .features li, .pricing_table_yearly .features li{
+  list-style-type: none;
+  padding: 5px 0;
+}
+.pricing_table_monthly .footer, .pricing_table_yearly .footer{
+  padding: 10px;
+  background: #6666ff;
+  margin-top: 10px;
+}
+.pricing_table_monthly .footer .action_button, .pricing_table_yearly .footer .action_button{
+  color: #2b72e5;
+  font-size: 11px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fcfcfc;
+  padding: 4px 20px;
+  border-radius: 15px;
+}
+.pricing_table_monthly li.active .footer .action_button, .pricing_table_yearly li.active .footer .action_button{
+  background: #ec7022;
+}
+/*Toggler*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#monthly, #yearly {
+  color: #ffffff;
+  font-weight: 900;
+}
+/*Toggler ends here*/
+.pricing_table_monthly:target{
+  display: none;
+}
+.pricing_table_monthly:target + input[type="checkbox"]:checked{
+  display: block;
+}
+
+
+.pricing_table_yearly{
+  display: none;
+}
+.pricing_table_yearly:target{
+  display: block;
+}
+.pricing_table_yearly:target + input[type="checkbox"]{
+  display: block;
+}
