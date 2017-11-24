@@ -5,6 +5,7 @@
 <head>
 <title>pricing table</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="./script.js"></script>
 
 </head>
 <body>
@@ -13,7 +14,7 @@
           Monthly
         </label>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" onclick="toggle()">
         <span class="slider round"></span>
       </label>
       <label id="yearly">
@@ -22,7 +23,7 @@
   </div>
 
 
-  <ul class="pricing_table_monthly" id="per_month">
+  <ul class="pricing_table_monthly" id="per_month" style="display: block;">
     <li>
       <h3>BASIC</h3>
       <div class="price_body">
@@ -98,7 +99,8 @@
             </div>
 
     </li>
-  <ul class="pricing_table_yearly" id="per_year">
+  </ul>
+  <ul class="pricing_table_yearly" id="per_year" style="display: none;">
     <li>
       <h3>BASIC</h3>
       <div class="price_body">

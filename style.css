@@ -137,20 +137,3 @@ input:checked + .slider:before {
   font-weight: 900;
 }
 /*Toggler ends here*/
-.pricing_table_monthly:target{
-  display: none;
-}
-.pricing_table_monthly:target + input[type="checkbox"]:checked{
-  display: block;
-}
-
-
-.pricing_table_yearly{
-  display: none;
-}
-.pricing_table_yearly:target{
-  display: block;
-}
-.pricing_table_yearly:target + input[type="checkbox"]{
-  display: block;
-}
